@@ -16,7 +16,7 @@
 * Proguard
 
 ## Уязвимости
-* `INSERT` SQLi в request_contract
-* Blind `SELECT` SQLi в login
-* IDOR в edit_me: можно поставить себе флаг `admin` в true и видеть контракты всех пользователей при вызове list_contracts
-* IDOR в check_contract: при запросе можно задать любой ID, принадлежность указанного ID к текущему пользователю не проверяется
+* `INSERT` SQLi в [request_contract](https://gitlab.com/mctf/final-2019/tomtom/blob/master/backend/src/api/request_contract.c#L86)
+* Blind `SELECT` SQLi в [login](https://gitlab.com/mctf/final-2019/tomtom/blob/master/backend/src/api/login.c#L23)
+* IDOR в [edit_me](https://gitlab.com/mctf/final-2019/tomtom/blob/master/backend/src/api/edit_me.c#L9): можно поставить себе флаг `admin` в true и видеть контракты всех пользователей при вызове list_contracts
+* IDOR в [check_contract](https://gitlab.com/mctf/final-2019/tomtom/blob/master/backend/src/api/check_contract.c#L7): при запросе можно задать любой ID, принадлежность указанного ID к текущему пользователю не проверяется
