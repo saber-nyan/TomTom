@@ -1,0 +1,7 @@
+namespace TomTomBackend.Request;
+
+table CheckContract {
+	token: string (required);
+	id: long = -1;
+}
+

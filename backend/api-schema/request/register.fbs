@@ -1,0 +1,8 @@
+namespace TomTomBackend.Request;
+
+table Register {
+	username: string (required);
+	password: string (required);
+	firstName: string (required);
+	lastName: string (required);
+}

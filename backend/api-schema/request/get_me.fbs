@@ -1,0 +1,5 @@
+namespace TomTomBackend.Request;
+
+table GetMe {
+	token: string (required);
+}

@@ -1,0 +1,17 @@
+FROM debian:buster-20191014-slim
+
+RUN apt update && apt -y install --no-install-recommends libpq5 zlib1g openssl supervisor
+
+COPY ./tomtom_backend /app/tomtom_backend
+
+ENV LD_LIBRARY_PATH /app/
+COPY ./libwebsockets.so.15 /app/libwebsockets.so.15
+
+WORKDIR /app/
+
+ADD supervisor.conf /etc/supervisor/supervisord.conf
+
+EXPOSE 228:228
+
+CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
+

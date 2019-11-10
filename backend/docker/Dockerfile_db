@@ -1,0 +1,6 @@
+FROM postgres:11.5-alpine
+
+ENV POSTGRES_USER tomtom
+ENV POSTGRES_PASSWORD some_secret
+ENV POSTGRES_DB tomtom
+

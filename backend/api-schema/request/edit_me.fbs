@@ -1,0 +1,10 @@
+namespace TomTomBackend.Request;
+
+table EditMe {
+	username: string;
+	password: string;
+	firstName: string;
+	lastName: string;
+	admin: bool = false;
+	token: string (required);
+}

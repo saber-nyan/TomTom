@@ -1,0 +1,5 @@
+namespace TomTomBackend.Request;
+
+table ListContracts {
+	token: string (required);
+}

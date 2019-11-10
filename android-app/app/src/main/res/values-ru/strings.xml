@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="LoginFragment_layout_mctf_logo">Логотип M*CTF</string>
+    <string name="app_name">ТомТом</string>
+    <string name="LoginFragment_layout_app_promo">Мобильное приложение Единой информационной системы в сфере CTF-закупок</string>
+    <string name="LoginFragment_layout_form_button_send">Войти</string>
+    <string name="LoginFragment_layout_form_password">Пароль</string>
+    <string name="LoginFragment_layout_form_switchToRegister">Еще нет аккаунта? Зарегистрироваться!</string>
+    <string name="LoginFragment_layout_form_username">Имя пользователя</string>
+    <string name="RegisterFragment_layout_form_button_send">Зарегистрироваться</string>
+    <string name="RegisterFragment_layout_form_firstName">Имя</string>
+    <string name="RegisterFragment_layout_form_lastName">Фамилия</string>
+    <string name="RegisterFragment_layout_form_switchToLogin">Уже есть аккаунт? Войти!</string>
+    <string name="RegisterFragment_layout_form_serverUrl">Адрес сервера</string>
+    <string name="LoginFragment_error_fieldIsEmpty">Поле не может быть пустым</string>
+    <string name="NewContractFragment_layout_attachment_hint">Вложение</string>
+    <string name="NewContractFragment_layout_description_hint">Описание</string>
+    <string name="NewContractFragment_layout_execute">Отправить</string>
+    <string name="NewContractFragment_layout_name_hint">Название</string>
+    <string name="NewContractFragment_layout_price_hint">Цена</string>
+    <string name="NewContractFragment_layout_selectAttach_text">Обзор…</string>
+    <string name="NewContractFragment_result_success">Успех!</string>
+    <string name="ContractsListFragment_result_error">Не удалось обновить список: %s</string>
+    <string name="ContractAdapter_price_template">%.2f руб.</string>
+    <string name="ContractAdapter_status_accepted">Принято</string>
+    <string name="ContractAdapter_status_processing">В обработке</string>
+    <string name="ContractAdapter_status_rejected">Отказано</string>
+    <string name="ContractAdapter_status_unknown">Неизвестно</string>
+    <string name="ContractAdapter_status_template">"Статус: "</string>
+    <string name="ContractDetailsFragment_result_error">Не удалось получить информацию: %s</string>
+    <string name="ContractDetailsFragment_layout_createdAt_hint">Дата создания</string>
+    <string name="ContractDetailsFragment_layout_creator_firstName_hint">Имя создателя</string>
+    <string name="ContractDetailsFragment_layout_creator_lastName_hint">Фамилия создателя</string>
+    <string name="ContractDetailsFragment_layout_creator_username_hint">Имя пользователя создателя</string>
+    <string name="ContractDetailsFragment_layout_saveAttachment_text">Сохранить вложение</string>
+    <string name="ContractDetailsFragment_layout_status_hint">Статус</string>
+    <string name="ProfileFragment_layout_form_apply">Применить</string>
+    <string name="ProfileFragment_layout_form_logout">Выйти</string>
+    <string name="ProfileFragment_request_fail">Невозможно получить информацию: %s</string>
+    <string name="ProfileFragment_edit_request_fail">Ошибка запроса: %s</string>
+    <string name="NavigationMenu_contracts">Контракты</string>
+    <string name="NavigationMenu_newContract">Новый контракт</string>
+    <string name="NavigationMenu_profile">Профиль</string>
+</resources>

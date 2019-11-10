@@ -1,0 +1,5 @@
+namespace TomTomBackend.Response;
+
+table EditMe {
+	token: string (required);
+}

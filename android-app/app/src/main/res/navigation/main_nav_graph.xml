@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph.xml"
+    app:startDestination="@id/contractsListFragment">
+
+    <fragment
+        android:id="@+id/contractsListFragment"
+        android:name="online.mctf.tomtom.ui.main.fragments.ContractsListFragment"
+        android:label="fragment_contracts_list"
+        tools:layout="@layout/fragment_contracts_list">
+        <action
+            android:id="@+id/action_contractsListFragment_to_contractDetailsFragment"
+            app:destination="@id/contractDetailsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/newContractFragment"
+        android:name="online.mctf.tomtom.ui.main.fragments.NewContractFragment"
+        android:label="fragment_new_contract"
+        tools:layout="@layout/fragment_new_contract" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="online.mctf.tomtom.ui.main.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/contractDetailsFragment"
+        android:name="online.mctf.tomtom.ui.main.fragments.ContractDetailsFragment"
+        android:label="fragment_contract_details"
+        tools:layout="@layout/fragment_contract_details" />
+</navigation>

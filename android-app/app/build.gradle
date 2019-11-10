@@ -1,0 +1,70 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+}
+
+def ksPropsFile = rootProject.file("keystore.properties")
+def ksProps = new Properties()
+ksProps.load(new FileInputStream(ksPropsFile))
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    defaultConfig {
+        applicationId "online.mctf.tomtom"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "0.0.1a"
+        resConfigs "en", "ru"
+    }
+    signingConfigs {
+        config {
+            keyAlias ksProps['keyAlias']
+            keyPassword ksProps['keyPassword']
+            storeFile file(ksProps['storeFile'])
+            storePassword ksProps['storePassword']
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+    packagingOptions {
+        exclude("META-INF/*.kotlin_module")
+        exclude("**.kotlin_builtins")
+        exclude("**.kotlin_metadata")
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.fragment:fragment-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.0.0'
+
+    implementation 'br.com.simplepass:loading-button-android:2.1.5'
+
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.1.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.1.0'
+
+    //noinspection GradleDependency
+    implementation 'com.google.flatbuffers:flatbuffers-java:1.11.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.2.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/contractsListFragment"
+        android:icon="@drawable/ic_featured_play_list_white_24dp"
+        android:title="@string/NavigationMenu_contracts" />
+    <item
+        android:id="@+id/newContractFragment"
+        android:icon="@drawable/ic_add_white_24dp"
+        android:title="@string/NavigationMenu_newContract" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_person_white_24dp"
+        android:title="@string/NavigationMenu_profile" />
+
+</menu>

@@ -1,0 +1,5 @@
+namespace TomTomBackend.Response;
+
+table Login {
+	token: string (required);
+}

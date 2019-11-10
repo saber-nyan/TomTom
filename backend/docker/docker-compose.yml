@@ -1,0 +1,22 @@
+version: "2"
+services:
+  tomtom:
+    container_name: tomtom-backend
+    build:
+      context: .
+      dockerfile: Dockerfile_tomtom
+    image: tomtom-backend:v1
+    ports:
+      - "228:228"
+    links:
+      - db
+    depends_on:
+      - db
+  db:
+    container_name: tomtom-db
+    build:
+      context: .
+      dockerfile: Dockerfile_db
+    image: tomtom-db:v1
+    restart: always
+

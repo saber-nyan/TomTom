@@ -1,0 +1,21 @@
+include "r_check_contract.fbs";
+include "r_edit_me.fbs";
+include "r_get_me.fbs";
+include "r_list_contracts.fbs";
+include "r_login.fbs";
+include "r_register.fbs";
+include "r_request_contract.fbs";
+
+namespace TomTomBackend.Response;
+
+union MessageType {
+	Login, Register, GetMe, EditMe, RequestContract, ListContracts, CheckContract
+}
+
+table Message {
+	msg: MessageType;
+	error: bool;
+	errorDescription: string;
+}
+
+root_type Message;

@@ -1,0 +1,7 @@
+include "r_check_contract.fbs";
+
+namespace TomTomBackend.Response;
+
+table RequestContract {
+	result: CheckContract (required);
+}

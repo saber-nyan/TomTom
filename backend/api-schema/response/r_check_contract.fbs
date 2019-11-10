@@ -1,0 +1,24 @@
+namespace TomTomBackend.Response;
+
+enum Status : ubyte {
+	Processing = 1,
+	Accepted,
+	Rejected
+}
+
+table User {
+	username: string (required);
+	firstName: string (required);
+	lastName: string (required);
+}
+
+table CheckContract {
+	id: long = -1;
+	name: string (required);
+	description: string;
+	price: float64 = -1;
+	attachment: [ubyte];
+	status: Status = Processing;
+	created_at: uint64;
+	by_user: User (required);
+}

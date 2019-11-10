@@ -1,0 +1,9 @@
+namespace TomTomBackend.Request;
+
+table RequestContract {
+	token: string (required);
+	name: string (required);
+	description: string;
+	price: float64 = -1;
+	attachment: [ubyte];
+}

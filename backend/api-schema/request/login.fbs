@@ -1,0 +1,6 @@
+namespace TomTomBackend.Request;
+
+table Login {
+	username: string (required);
+	password: string (required);
+}
