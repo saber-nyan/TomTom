@@ -18,12 +18,12 @@
 ## Сборка
 
 ```bash
-$ git clone ...
+$ git clone https://gitlab.com/mctf/final-2019/tomtom.git
 $ mkdir tomtom-build; cd tomtom-build
 $ cmake -DCMAKE_BUILD_TYPE=Release ../backend  # Или -DCMAKE_BUILD_TYPE=Debug
 $ make -j4 
 
-$ ./tomtom_backend -v
+$ ./tomtom_backend -v -p 'Порт' -t 'Кол-во потоков' -d 'Строка подключения к БД' -s 'Соль для хэширования паролей'
 ```
 
 ***
