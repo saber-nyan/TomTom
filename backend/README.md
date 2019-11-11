@@ -18,7 +18,7 @@
 ## Сборка
 
 ```bash
-$ git clone https://gitlab.com/mctf/final-2019/tomtom.git
+$ git clone hhttps://github.com/saber-nyan/TomTom.git
 $ mkdir tomtom-build; cd tomtom-build
 $ cmake -DCMAKE_BUILD_TYPE=Release ../backend  # Или -DCMAKE_BUILD_TYPE=Debug
 $ make -j4 
